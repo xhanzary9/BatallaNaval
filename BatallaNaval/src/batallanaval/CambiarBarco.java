@@ -12,7 +12,7 @@ public class CambiarBarco implements StateJugador{
         entradaTeclado = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
         System.out.println ("Entrada recibida por teclado es: \"" + entradaTeclado +"\"");
     }
-    
+
     /**
      *Metodo para
      */
