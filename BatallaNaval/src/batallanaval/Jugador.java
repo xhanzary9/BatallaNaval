@@ -62,7 +62,7 @@ public class Jugador {
         this.estado = estado;
     }
     
-    public void accion() {
-        estado.accion();
+    public void accion(Tablero tablero) {
+        estado.accion(tablero);
     }
 }
