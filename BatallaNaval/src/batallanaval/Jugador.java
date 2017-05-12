@@ -7,8 +7,8 @@ public class Jugador {
     * numero entero que simboliza el número del jugador "Jugador 1" o "Jugador 2"
     * tablero entero que simboliza el número de tablero que tiene el jugador
     */
-    private int vidas;
-    private int numero; 
+    private int idJugador;
+    private int vidas; 
     private Tablero tablero;
     private StateJugador estado;
     
@@ -17,19 +17,27 @@ public class Jugador {
     
      /**
      * Metodo constructor  de la clase abastracta Jugador.
+     * @param idJugador
      * @param vidas  número de vidas que se asignal al jugador.
-     * @param numero entero que identifica al jugador.
      * @param tablero
      * @param estado
      */
-    public Jugador(int vidas, int numero, Tablero tablero, StateJugador estado){
-   
+    public Jugador(int idJugador, int vidas, Tablero tablero, StateJugador estado){
+        
+        this.idJugador = idJugador;
         this.vidas = vidas;
-        this.numero = numero;
         this.tablero = tablero;
         this.estado = estado;
     }
 
+    public int getIdJugador() {
+        return idJugador;
+    }
+
+    public void setIdJugador(int idJugador) {
+        this.idJugador = idJugador;
+    }
+    
     public int getVidas() {
         return vidas;
     }
@@ -37,15 +45,7 @@ public class Jugador {
     public void setVidas(int vidas) {
         this.vidas = vidas;
     }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
+    
     public Tablero getTablero() {
         return tablero;
     }
@@ -62,7 +62,9 @@ public class Jugador {
         this.estado = estado;
     }
     
-    public void accion(Tablero tablero) {
-        estado.accion(tablero);
+    public void accion() {
+        estado.accion();
     }
+    
+    
 }

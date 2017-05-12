@@ -1,12 +1,19 @@
 package batallanaval;
 
-public interface StateJugador {
+public abstract class StateJugador {
+    
+    public Jugador jugador;
+
+    public void StateJugador(Jugador jugador){
+        this.jugador = jugador;
+    }
     
     /**
     * Método para ejecutar una acción("CambiarBarco", "Mostrar tablero", "ColocarBomba")
     * dependiendo del estado del jugador
-     * @param tablero
     */
-    public void accion(Tablero tablero);
+    public void accion(){
+    
+    }
     
 }
